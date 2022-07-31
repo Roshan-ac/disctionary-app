@@ -4,8 +4,8 @@ import Disctonary from "./pages/Disctonary";
 
 function App() {
   return (
-    <div className=" bg-slate-800">
-      <Navbar />
+    <div className="">
+      <Navbar/>
       <Disctonary />
     </div>
   );
