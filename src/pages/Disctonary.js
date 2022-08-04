@@ -1,9 +1,9 @@
-import React, { useState} from 'react'
+import React, { useState,useEffect} from 'react'
 import { Antonyms, Definition, Example, Synonyms } from '../components/Meaning'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function Disctonary(props) {
-const {toglemode}=props.data;
 
+const {toglemode}=props.data;
     const PlaywordSound = (url) => {
         var audio = new Audio(url);
         audio.play();
@@ -59,12 +59,13 @@ const {toglemode}=props.data;
 
 
 
+
     return (
         <div className={`${toglemode==='dark'?'bg-slate-700':''}`}>
             <div className="form py-10 h-20">
                 <form action="" className='flex justify-center space-x-5'>
                     <input onChange={(e) => setWord(e.target.value)} className={`p-2 text-black tracking-wide bg-slate-300  rounded-md ${toglemode==='dark'?'bg-slate-300':''}`} type="text" placeholder='Search word' />
-                    <button type='submit' onClick={handleSubmit} className={`bg-green-500 tracking-wider border-gray-100 px-7 text-black py-2 rounded-md ${toglemode==='dark'?'bg-blue-900 text-white':''}`}>Search</button>
+                    <button type='submit' onClick={handleSubmit} className={`bg-green-500 tracking-wider border-gray-100 px-7 py-2 rounded-md ${toglemode==='dark'?'bg-blue-900 text-white':''}`}>Search</button>
                 </form>
                   <div className="capitalize alertMessage items-center text-center py-4">
                     <h1 className={`font-semibold tracking-wider text-red-700 `}>{alertMessage}</h1>

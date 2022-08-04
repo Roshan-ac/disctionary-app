@@ -8,7 +8,7 @@ function Navbar(props) {
           <img src={logo} alt="logo here" className='w-12 h-12' />
           <h3 className='text-lg tracking-widest uppercase font-bold'>XFORD Dictionary</h3>
         </nav>
-        <button onClick={()=>tooglebutton(toglemode==='dark'?'light':'dark')} className={`bg-black h-6 w-12 rounded-full p-1 flex ${toglemode==='light'?'justify-start':'justify-end bg-white'}`}>
+        <button onClick={()=>tooglebutton(toglemode==='dark'?'light':'dark')} className={`h-6 w-12 rounded-full p-1 flex ${toglemode==='dark'?'justify-end bg-white':'justify-start bg-black'}`}>
           <div  className={`h-4 w-4 rounded-full ${toglemode==='dark'?'bg-black':'bg-white'} mx-1`} ></div>
         </button>
       </div>
